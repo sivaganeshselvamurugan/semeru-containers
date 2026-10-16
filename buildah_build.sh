@@ -101,7 +101,6 @@ if command -v dnf &> /dev/null; then
     [ -e "$rpm_macros_file.bak" ] && echo "Restoring backup rpm macros" >&2 && mv "$rpm_macros_file.bak" "$rpm_macros_file"
 
     # Leftovers from dnf
-    rm -rf "$base_mount_point/var/cache/" "$base_mount_point/var/lib/rhsm/" "$base_mount_point/var/lib/rpm/" "$base_mount_point/var/log/"
 else
     echo "Error: 'dnf' command not found" >&2
     return 1
